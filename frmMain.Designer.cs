@@ -57,6 +57,8 @@
             this.cbxPeriod = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodDown)).BeginInit();
@@ -69,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastProcessCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShare)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -80,11 +83,13 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1899, 1181);
+            this.tabControl1.Size = new System.Drawing.Size(1924, 1181);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.lblShare);
             this.tabPage1.Controls.Add(this.cbxSymbol);
             this.tabPage1.Controls.Add(this.lblPeriodDown);
@@ -113,7 +118,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1891, 1155);
+            this.tabPage1.Size = new System.Drawing.Size(1916, 1155);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "BIST";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -124,7 +129,7 @@
             this.lblShare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblShare.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShare.ForeColor = System.Drawing.Color.Navy;
-            this.lblShare.Location = new System.Drawing.Point(5, 651);
+            this.lblShare.Location = new System.Drawing.Point(5, 634);
             this.lblShare.Name = "lblShare";
             this.lblShare.Size = new System.Drawing.Size(70, 24);
             this.lblShare.TabIndex = 47;
@@ -133,7 +138,7 @@
             // cbxSymbol
             // 
             this.cbxSymbol.FormattingEnabled = true;
-            this.cbxSymbol.Location = new System.Drawing.Point(80, 654);
+            this.cbxSymbol.Location = new System.Drawing.Point(80, 637);
             this.cbxSymbol.Margin = new System.Windows.Forms.Padding(2);
             this.cbxSymbol.Name = "cbxSymbol";
             this.cbxSymbol.Size = new System.Drawing.Size(99, 21);
@@ -145,7 +150,7 @@
             this.lblPeriodDown.AutoSize = true;
             this.lblPeriodDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPeriodDown.Location = new System.Drawing.Point(1684, 905);
+            this.lblPeriodDown.Location = new System.Drawing.Point(1554, 905);
             this.lblPeriodDown.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeriodDown.Name = "lblPeriodDown";
             this.lblPeriodDown.Size = new System.Drawing.Size(94, 24);
@@ -158,12 +163,12 @@
             this.dgvPeriodDown.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvPeriodDown.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeriodDown.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dgvPeriodDown.Location = new System.Drawing.Point(1583, 934);
+            this.dgvPeriodDown.Location = new System.Drawing.Point(1493, 934);
             this.dgvPeriodDown.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPeriodDown.Name = "dgvPeriodDown";
             this.dgvPeriodDown.RowHeadersWidth = 62;
             this.dgvPeriodDown.RowTemplate.Height = 28;
-            this.dgvPeriodDown.Size = new System.Drawing.Size(300, 200);
+            this.dgvPeriodDown.Size = new System.Drawing.Size(210, 210);
             this.dgvPeriodDown.TabIndex = 44;
             // 
             // lblPeriodUp
@@ -171,7 +176,7 @@
             this.lblPeriodUp.AutoSize = true;
             this.lblPeriodUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodUp.ForeColor = System.Drawing.Color.Green;
-            this.lblPeriodUp.Location = new System.Drawing.Point(1374, 905);
+            this.lblPeriodUp.Location = new System.Drawing.Point(1332, 905);
             this.lblPeriodUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeriodUp.Name = "lblPeriodUp";
             this.lblPeriodUp.Size = new System.Drawing.Size(120, 24);
@@ -183,7 +188,7 @@
             this.lblPeriodx.AutoSize = true;
             this.lblPeriodx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodx.ForeColor = System.Drawing.Color.Black;
-            this.lblPeriodx.Location = new System.Drawing.Point(1534, 891);
+            this.lblPeriodx.Location = new System.Drawing.Point(1451, 891);
             this.lblPeriodx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeriodx.Name = "lblPeriodx";
             this.lblPeriodx.Size = new System.Drawing.Size(81, 24);
@@ -201,7 +206,7 @@
             this.dgvPeriodUp.Name = "dgvPeriodUp";
             this.dgvPeriodUp.RowHeadersWidth = 62;
             this.dgvPeriodUp.RowTemplate.Height = 28;
-            this.dgvPeriodUp.Size = new System.Drawing.Size(300, 200);
+            this.dgvPeriodUp.Size = new System.Drawing.Size(210, 210);
             this.dgvPeriodUp.TabIndex = 41;
             // 
             // lblDown
@@ -209,7 +214,7 @@
             this.lblDown.AutoSize = true;
             this.lblDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDown.Location = new System.Drawing.Point(1674, 649);
+            this.lblDown.Location = new System.Drawing.Point(1549, 633);
             this.lblDown.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDown.Name = "lblDown";
             this.lblDown.Size = new System.Drawing.Size(94, 24);
@@ -222,12 +227,12 @@
             this.dgvDailyDown.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvDailyDown.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDailyDown.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dgvDailyDown.Location = new System.Drawing.Point(1583, 680);
+            this.dgvDailyDown.Location = new System.Drawing.Point(1493, 663);
             this.dgvDailyDown.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDailyDown.Name = "dgvDailyDown";
             this.dgvDailyDown.RowHeadersWidth = 62;
             this.dgvDailyDown.RowTemplate.Height = 28;
-            this.dgvDailyDown.Size = new System.Drawing.Size(300, 200);
+            this.dgvDailyDown.Size = new System.Drawing.Size(210, 210);
             this.dgvDailyDown.TabIndex = 39;
             // 
             // lblUp
@@ -235,7 +240,7 @@
             this.lblUp.AutoSize = true;
             this.lblUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUp.ForeColor = System.Drawing.Color.Green;
-            this.lblUp.Location = new System.Drawing.Point(1375, 649);
+            this.lblUp.Location = new System.Drawing.Point(1336, 632);
             this.lblUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUp.Name = "lblUp";
             this.lblUp.Size = new System.Drawing.Size(120, 24);
@@ -247,7 +252,7 @@
             this.lblDaily.AutoSize = true;
             this.lblDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDaily.ForeColor = System.Drawing.Color.Black;
-            this.lblDaily.Location = new System.Drawing.Point(1529, 626);
+            this.lblDaily.Location = new System.Drawing.Point(1447, 609);
             this.lblDaily.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDaily.Name = "lblDaily";
             this.lblDaily.Size = new System.Drawing.Size(92, 24);
@@ -260,12 +265,12 @@
             this.dgvDailyUp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvDailyUp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDailyUp.GridColor = System.Drawing.Color.Chartreuse;
-            this.dgvDailyUp.Location = new System.Drawing.Point(1279, 679);
+            this.dgvDailyUp.Location = new System.Drawing.Point(1279, 663);
             this.dgvDailyUp.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDailyUp.Name = "dgvDailyUp";
             this.dgvDailyUp.RowHeadersWidth = 62;
             this.dgvDailyUp.RowTemplate.Height = 28;
-            this.dgvDailyUp.Size = new System.Drawing.Size(300, 200);
+            this.dgvDailyUp.Size = new System.Drawing.Size(210, 210);
             this.dgvDailyUp.TabIndex = 36;
             // 
             // dgv100_2
@@ -273,12 +278,12 @@
             this.dgv100_2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv100_2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgv100_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv100_2.Location = new System.Drawing.Point(1235, 69);
+            this.dgv100_2.Location = new System.Drawing.Point(1435, 69);
             this.dgv100_2.Margin = new System.Windows.Forms.Padding(2);
             this.dgv100_2.Name = "dgv100_2";
             this.dgv100_2.RowHeadersWidth = 62;
             this.dgv100_2.RowTemplate.Height = 28;
-            this.dgv100_2.Size = new System.Drawing.Size(407, 466);
+            this.dgv100_2.Size = new System.Drawing.Size(485, 466);
             this.dgv100_2.TabIndex = 35;
             // 
             // lblBist100
@@ -287,7 +292,7 @@
             this.lblBist100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblBist100.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBist100.ForeColor = System.Drawing.Color.Navy;
-            this.lblBist100.Location = new System.Drawing.Point(1183, 42);
+            this.lblBist100.Location = new System.Drawing.Point(1375, 42);
             this.lblBist100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBist100.Name = "lblBist100";
             this.lblBist100.Size = new System.Drawing.Size(93, 24);
@@ -299,12 +304,12 @@
             this.dgv100_1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv100_1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgv100_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv100_1.Location = new System.Drawing.Point(828, 69);
+            this.dgv100_1.Location = new System.Drawing.Point(948, 69);
             this.dgv100_1.Margin = new System.Windows.Forms.Padding(2);
             this.dgv100_1.Name = "dgv100_1";
             this.dgv100_1.RowHeadersWidth = 62;
             this.dgv100_1.RowTemplate.Height = 28;
-            this.dgv100_1.Size = new System.Drawing.Size(407, 466);
+            this.dgv100_1.Size = new System.Drawing.Size(485, 466);
             this.dgv100_1.TabIndex = 33;
             // 
             // lblBist50
@@ -313,7 +318,7 @@
             this.lblBist50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblBist50.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBist50.ForeColor = System.Drawing.Color.Navy;
-            this.lblBist50.Location = new System.Drawing.Point(580, 42);
+            this.lblBist50.Location = new System.Drawing.Point(656, 42);
             this.lblBist50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBist50.Name = "lblBist50";
             this.lblBist50.Size = new System.Drawing.Size(82, 24);
@@ -325,12 +330,12 @@
             this.dgv50.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv50.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgv50.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv50.Location = new System.Drawing.Point(416, 69);
+            this.dgv50.Location = new System.Drawing.Point(460, 69);
             this.dgv50.Margin = new System.Windows.Forms.Padding(2);
             this.dgv50.Name = "dgv50";
             this.dgv50.RowHeadersWidth = 62;
             this.dgv50.RowTemplate.Height = 28;
-            this.dgv50.Size = new System.Drawing.Size(407, 380);
+            this.dgv50.Size = new System.Drawing.Size(485, 380);
             this.dgv50.TabIndex = 31;
             // 
             // lblBist30
@@ -339,7 +344,7 @@
             this.lblBist30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblBist30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBist30.ForeColor = System.Drawing.Color.Navy;
-            this.lblBist30.Location = new System.Drawing.Point(156, 43);
+            this.lblBist30.Location = new System.Drawing.Point(186, 43);
             this.lblBist30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBist30.Name = "lblBist30";
             this.lblBist30.Size = new System.Drawing.Size(82, 24);
@@ -351,13 +356,13 @@
             this.dgv30.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv30.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgv30.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv30.Location = new System.Drawing.Point(4, 69);
+            this.dgv30.Location = new System.Drawing.Point(2, 69);
             this.dgv30.Margin = new System.Windows.Forms.Padding(2);
             this.dgv30.Name = "dgv30";
             this.dgv30.RowHeadersWidth = 62;
             this.dgv30.RowTemplate.Height = 28;
             this.dgv30.ShowEditingIcon = false;
-            this.dgv30.Size = new System.Drawing.Size(407, 550);
+            this.dgv30.Size = new System.Drawing.Size(455, 555);
             this.dgv30.TabIndex = 29;
             // 
             // nudLastProcessCount
@@ -406,12 +411,12 @@
             this.dgvShare.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvShare.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvShare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShare.Location = new System.Drawing.Point(4, 680);
+            this.dgvShare.Location = new System.Drawing.Point(4, 663);
             this.dgvShare.Margin = new System.Windows.Forms.Padding(2);
             this.dgvShare.Name = "dgvShare";
             this.dgvShare.RowHeadersWidth = 62;
             this.dgvShare.RowTemplate.Height = 28;
-            this.dgvShare.Size = new System.Drawing.Size(1272, 454);
+            this.dgvShare.Size = new System.Drawing.Size(1272, 481);
             this.dgvShare.TabIndex = 25;
             // 
             // cbxPeriod
@@ -438,7 +443,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1868, 875);
+            this.tabPage2.Size = new System.Drawing.Size(1891, 1155);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "BINANCE";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -449,15 +454,37 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ShareOnDeskTop.Properties.Resources.fishing;
+            this.pictureBox1.Location = new System.Drawing.Point(702, 454);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(241, 170);
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Red;
+            this.textBox1.Location = new System.Drawing.Point(462, 454);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 169);
+            this.textBox1.TabIndex = 49;
+            this.textBox1.Text = "Anlık oluşacak fırsatlar burada yazılacak. Otomatik emir girilecek ve bize mail a" +
+    "tacak";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1899, 1181);
+            this.ClientSize = new System.Drawing.Size(1924, 1181);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
             this.Text = "EMTİA Analiz Ekranı";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -472,6 +499,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastProcessCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShare)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -506,6 +534,8 @@
         private System.Windows.Forms.ComboBox cbxSymbol;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblShare;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

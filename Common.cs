@@ -21,6 +21,10 @@ namespace ShareOnDeskTop
         public static List<string> shareLast50List = new List<string>();
         public static Dictionary<string, List<Analiz>> shares = new Dictionary<string, List<Analiz>>();
         public static Dictionary<string, decimal> closedValue = new Dictionary<string, decimal>();
+        public static Dictionary<string, decimal> dailyUpValue = new Dictionary<string, decimal>();
+        public static Dictionary<string, decimal> dailyDownValue = new Dictionary<string, decimal>();
+        public static Dictionary<string, decimal> periodUpValue = new Dictionary<string, decimal>();
+        public static Dictionary<string, decimal> periodDownValue = new Dictionary<string, decimal>();
 
         public static int lastProcessCount = 10;
         public static string interval = "1m";
