@@ -25,6 +25,7 @@ namespace ShareOnDeskTop
         private void frmMain_Load(object sender, EventArgs e)
         {
             Common.mainForm = this;
+            
             cbxPeriod.SelectedIndex = 0;
             dgvShare.ColumnCount = 14;
             dgvShare.Columns[0].Name = "Sıra No";
@@ -51,6 +52,7 @@ namespace ShareOnDeskTop
             dgv30.Columns[4].Name = "%Son";
             dgv30.Columns[5].Name = "%Aralık";
 
+            
             dgv50.ColumnCount = 6;
             dgv50.Columns[0].Name = "Symbol";
             dgv50.Columns[1].Name = "Dünkü";
