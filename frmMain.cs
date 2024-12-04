@@ -100,13 +100,13 @@ namespace ShareOnDeskTop
             connection.Open();
                     
             string sql = $@"select d.Symbol, d.BISTx , (select top 1 i.CloseValue
-						                                from Ocean.dbo.TradingViewAnalysis i
+						                                from {Common.dbName}.dbo.TradingViewAnalysis i
 						                                where 1=1
 						                                and i.symbol = d.Symbol
 						                                and i.InsertDateTime between DATETRUNC(day, getdate()) + ' 09:09' and DATETRUNC(day, getdate()) + ' 09:49.999'
 						                                order by i.Id desc
 						                                ) closedValue
-                            from Ocean.dbo.SYMBOL d
+                            from {Common.dbName}.dbo.SYMBOL d
                             where 1=1 
                             and d.Active = 1 
                             and d.Source = 'BIST' 
@@ -188,9 +188,9 @@ namespace ShareOnDeskTop
             
             foreach (string item in list)
             {
-                int g;
-                if (item == "PAPIL")
-                    g = 0;
+                //int g;
+                //if (item == "PAPIL")
+                //    g = 0;
 
                 List<Analiz> share = Common.shares[item];
                 int cnt = share.Count;

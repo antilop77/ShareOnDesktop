@@ -12,10 +12,11 @@ namespace ShareOnDeskTop
     public class Common
     {
         public static frmMain mainForm;
-        public static string dbName = "Ocean";
-        public static string dbServer = "192.168.1.2";
+        public static string dbName;
+        public static string dbServer;
+        public static string dbPassword;
         //private readonly string _connectionString = "Server=localhost;Database=Ocean;User Id=sa;Password=zeka7744;Trusted_Connection=True;TrustServerCertificate=True;";
-        public static string _connectionString = "Server=" + dbServer + ";Database=" + dbName + ";User Id=sa;Password=zeka7744;TrustServerCertificate=True;";
+        public static string _connectionString;
         public static List<string> share30List = new List<string>();
         public static List<string> shareNext20List = new List<string>();
         public static List<string> shareLast50List = new List<string>();
