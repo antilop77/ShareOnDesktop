@@ -101,7 +101,7 @@ namespace ShareOnDeskTop
 						                                from Ocean.dbo.TradingViewAnalysis i
 						                                where 1=1
 						                                and i.symbol = d.Symbol
-						                                and i.InsertDateTime between '2024-12-03 09:09' and '2024-12-03 09:49.999'
+						                                and i.InsertDateTime between DATETRUNC(day, getdate()) + ' 09:09' and DATETRUNC(day, getdate()) + ' 09:49.999'
 						                                order by i.Id desc
 						                                ) closedValue
                             from Ocean.dbo.SYMBOL d
