@@ -291,7 +291,6 @@ namespace ShareOnDeskTop
                 i++;
             }
         }
-
         private void fnTimer()
         {
             Thread myNewThread;
@@ -320,14 +319,11 @@ namespace ShareOnDeskTop
                 }
                 fRefresh = true;
             }
-        }
-        
-
+        }     
         private void cbxSymbol_SelectedIndexChanged(object sender, EventArgs e)
         {
             fnCbxSymbol();
         }
-
         private void fnCbxSymbol()
         {
             List<Analiz> list2 = null;
@@ -340,7 +336,6 @@ namespace ShareOnDeskTop
             if (list2 == null) return;
             fnRefreshGrid(list2);
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (!fRefresh)

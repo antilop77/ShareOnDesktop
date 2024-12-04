@@ -127,10 +127,10 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(815, 772);
+            this.textBox1.Location = new System.Drawing.Point(834, 898);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(611, 84);
+            this.textBox1.Size = new System.Drawing.Size(611, 57);
             this.textBox1.TabIndex = 49;
             this.textBox1.Text = "Anlık oluşacak fırsatlar burada yazılacak. Otomatik emir girilecek ve bize mail a" +
     "tacak";
@@ -138,9 +138,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ShareOnDeskTop.Properties.Resources.fishing;
-            this.pictureBox1.Location = new System.Drawing.Point(423, 700);
+            this.pictureBox1.Location = new System.Drawing.Point(407, 793);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(386, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(420, 142);
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
@@ -150,7 +150,7 @@
             this.lblShare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblShare.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShare.ForeColor = System.Drawing.Color.Navy;
-            this.lblShare.Location = new System.Drawing.Point(750, 26);
+            this.lblShare.Location = new System.Drawing.Point(660, 26);
             this.lblShare.Name = "lblShare";
             this.lblShare.Size = new System.Drawing.Size(70, 24);
             this.lblShare.TabIndex = 47;
@@ -159,7 +159,7 @@
             // cbxSymbol
             // 
             this.cbxSymbol.FormattingEnabled = true;
-            this.cbxSymbol.Location = new System.Drawing.Point(825, 28);
+            this.cbxSymbol.Location = new System.Drawing.Point(735, 26);
             this.cbxSymbol.Margin = new System.Windows.Forms.Padding(2);
             this.cbxSymbol.Name = "cbxSymbol";
             this.cbxSymbol.Size = new System.Drawing.Size(99, 21);
@@ -171,7 +171,7 @@
             this.lblPeriodDown.AutoSize = true;
             this.lblPeriodDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPeriodDown.Location = new System.Drawing.Point(606, 30);
+            this.lblPeriodDown.Location = new System.Drawing.Point(528, 26);
             this.lblPeriodDown.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeriodDown.Name = "lblPeriodDown";
             this.lblPeriodDown.Size = new System.Drawing.Size(94, 24);
@@ -184,13 +184,13 @@
             this.dgvPeriodDown.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvPeriodDown.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeriodDown.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dgvPeriodDown.Location = new System.Drawing.Point(556, 55);
+            this.dgvPeriodDown.Location = new System.Drawing.Point(498, 54);
             this.dgvPeriodDown.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPeriodDown.Name = "dgvPeriodDown";
             this.dgvPeriodDown.RowHeadersVisible = false;
             this.dgvPeriodDown.RowHeadersWidth = 62;
             this.dgvPeriodDown.RowTemplate.Height = 28;
-            this.dgvPeriodDown.Size = new System.Drawing.Size(180, 210);
+            this.dgvPeriodDown.Size = new System.Drawing.Size(154, 260);
             this.dgvPeriodDown.TabIndex = 44;
             // 
             // lblPeriodUp
@@ -198,7 +198,7 @@
             this.lblPeriodUp.AutoSize = true;
             this.lblPeriodUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodUp.ForeColor = System.Drawing.Color.Green;
-            this.lblPeriodUp.Location = new System.Drawing.Point(407, 28);
+            this.lblPeriodUp.Location = new System.Drawing.Point(355, 26);
             this.lblPeriodUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeriodUp.Name = "lblPeriodUp";
             this.lblPeriodUp.Size = new System.Drawing.Size(120, 24);
@@ -210,7 +210,7 @@
             this.lblPeriodx.AutoSize = true;
             this.lblPeriodx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodx.ForeColor = System.Drawing.Color.Black;
-            this.lblPeriodx.Location = new System.Drawing.Point(521, 4);
+            this.lblPeriodx.Location = new System.Drawing.Point(462, 4);
             this.lblPeriodx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeriodx.Name = "lblPeriodx";
             this.lblPeriodx.Size = new System.Drawing.Size(81, 24);
@@ -223,13 +223,13 @@
             this.dgvPeriodUp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvPeriodUp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeriodUp.GridColor = System.Drawing.Color.Chartreuse;
-            this.dgvPeriodUp.Location = new System.Drawing.Point(372, 55);
+            this.dgvPeriodUp.Location = new System.Drawing.Point(343, 54);
             this.dgvPeriodUp.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPeriodUp.Name = "dgvPeriodUp";
             this.dgvPeriodUp.RowHeadersVisible = false;
             this.dgvPeriodUp.RowHeadersWidth = 62;
             this.dgvPeriodUp.RowTemplate.Height = 28;
-            this.dgvPeriodUp.Size = new System.Drawing.Size(180, 210);
+            this.dgvPeriodUp.Size = new System.Drawing.Size(154, 260);
             this.dgvPeriodUp.TabIndex = 41;
             // 
             // lblDown
@@ -237,7 +237,7 @@
             this.lblDown.AutoSize = true;
             this.lblDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDown.Location = new System.Drawing.Point(243, 28);
+            this.lblDown.Location = new System.Drawing.Point(173, 26);
             this.lblDown.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDown.Name = "lblDown";
             this.lblDown.Size = new System.Drawing.Size(94, 24);
@@ -250,13 +250,13 @@
             this.dgvDailyDown.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvDailyDown.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDailyDown.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dgvDailyDown.Location = new System.Drawing.Point(188, 54);
+            this.dgvDailyDown.Location = new System.Drawing.Point(165, 54);
             this.dgvDailyDown.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDailyDown.Name = "dgvDailyDown";
             this.dgvDailyDown.RowHeadersVisible = false;
             this.dgvDailyDown.RowHeadersWidth = 62;
             this.dgvDailyDown.RowTemplate.Height = 28;
-            this.dgvDailyDown.Size = new System.Drawing.Size(180, 210);
+            this.dgvDailyDown.Size = new System.Drawing.Size(160, 260);
             this.dgvDailyDown.TabIndex = 39;
             // 
             // lblUp
@@ -264,7 +264,7 @@
             this.lblUp.AutoSize = true;
             this.lblUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUp.ForeColor = System.Drawing.Color.Green;
-            this.lblUp.Location = new System.Drawing.Point(28, 28);
+            this.lblUp.Location = new System.Drawing.Point(28, 26);
             this.lblUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUp.Name = "lblUp";
             this.lblUp.Size = new System.Drawing.Size(120, 24);
@@ -276,7 +276,7 @@
             this.lblDaily.AutoSize = true;
             this.lblDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDaily.ForeColor = System.Drawing.Color.Black;
-            this.lblDaily.Location = new System.Drawing.Point(152, 3);
+            this.lblDaily.Location = new System.Drawing.Point(121, 4);
             this.lblDaily.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDaily.Name = "lblDaily";
             this.lblDaily.Size = new System.Drawing.Size(92, 24);
@@ -295,7 +295,7 @@
             this.dgvDailyUp.RowHeadersVisible = false;
             this.dgvDailyUp.RowHeadersWidth = 62;
             this.dgvDailyUp.RowTemplate.Height = 28;
-            this.dgvDailyUp.Size = new System.Drawing.Size(180, 210);
+            this.dgvDailyUp.Size = new System.Drawing.Size(160, 260);
             this.dgvDailyUp.TabIndex = 36;
             // 
             // dgv100_2
@@ -303,13 +303,13 @@
             this.dgv100_2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv100_2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgv100_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv100_2.Location = new System.Drawing.Point(1219, 301);
+            this.dgv100_2.Location = new System.Drawing.Point(1255, 345);
             this.dgv100_2.Margin = new System.Windows.Forms.Padding(2);
             this.dgv100_2.Name = "dgv100_2";
             this.dgv100_2.RowHeadersVisible = false;
             this.dgv100_2.RowHeadersWidth = 62;
             this.dgv100_2.RowTemplate.Height = 28;
-            this.dgv100_2.Size = new System.Drawing.Size(400, 466);
+            this.dgv100_2.Size = new System.Drawing.Size(420, 550);
             this.dgv100_2.TabIndex = 35;
             // 
             // lblBist100
@@ -318,7 +318,7 @@
             this.lblBist100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblBist100.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBist100.ForeColor = System.Drawing.Color.Navy;
-            this.lblBist100.Location = new System.Drawing.Point(821, 272);
+            this.lblBist100.Location = new System.Drawing.Point(834, 319);
             this.lblBist100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBist100.Name = "lblBist100";
             this.lblBist100.Size = new System.Drawing.Size(93, 24);
@@ -330,13 +330,13 @@
             this.dgv100_1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv100_1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgv100_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv100_1.Location = new System.Drawing.Point(815, 301);
+            this.dgv100_1.Location = new System.Drawing.Point(833, 345);
             this.dgv100_1.Margin = new System.Windows.Forms.Padding(2);
             this.dgv100_1.Name = "dgv100_1";
             this.dgv100_1.RowHeadersVisible = false;
             this.dgv100_1.RowHeadersWidth = 62;
             this.dgv100_1.RowTemplate.Height = 28;
-            this.dgv100_1.Size = new System.Drawing.Size(400, 466);
+            this.dgv100_1.Size = new System.Drawing.Size(420, 550);
             this.dgv100_1.TabIndex = 33;
             // 
             // lblBist50
@@ -345,7 +345,7 @@
             this.lblBist50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblBist50.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBist50.ForeColor = System.Drawing.Color.Navy;
-            this.lblBist50.Location = new System.Drawing.Point(407, 275);
+            this.lblBist50.Location = new System.Drawing.Point(407, 319);
             this.lblBist50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBist50.Name = "lblBist50";
             this.lblBist50.Size = new System.Drawing.Size(82, 24);
@@ -357,13 +357,13 @@
             this.dgv50.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv50.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgv50.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv50.Location = new System.Drawing.Point(418, 301);
+            this.dgv50.Location = new System.Drawing.Point(407, 345);
             this.dgv50.Margin = new System.Windows.Forms.Padding(2);
             this.dgv50.Name = "dgv50";
             this.dgv50.RowHeadersVisible = false;
             this.dgv50.RowHeadersWidth = 62;
             this.dgv50.RowTemplate.Height = 28;
-            this.dgv50.Size = new System.Drawing.Size(393, 380);
+            this.dgv50.Size = new System.Drawing.Size(420, 450);
             this.dgv50.TabIndex = 31;
             // 
             // lblBist30
@@ -372,7 +372,7 @@
             this.lblBist30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblBist30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBist30.ForeColor = System.Drawing.Color.Navy;
-            this.lblBist30.Location = new System.Drawing.Point(8, 275);
+            this.lblBist30.Location = new System.Drawing.Point(7, 319);
             this.lblBist30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBist30.Name = "lblBist30";
             this.lblBist30.Size = new System.Drawing.Size(82, 24);
@@ -384,19 +384,19 @@
             this.dgv30.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv30.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgv30.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv30.Location = new System.Drawing.Point(7, 301);
+            this.dgv30.Location = new System.Drawing.Point(7, 345);
             this.dgv30.Margin = new System.Windows.Forms.Padding(2);
             this.dgv30.Name = "dgv30";
             this.dgv30.RowHeadersVisible = false;
             this.dgv30.RowHeadersWidth = 62;
             this.dgv30.RowTemplate.Height = 28;
             this.dgv30.ShowEditingIcon = false;
-            this.dgv30.Size = new System.Drawing.Size(410, 560);
+            this.dgv30.Size = new System.Drawing.Size(396, 644);
             this.dgv30.TabIndex = 29;
             // 
             // nudLastProcessCount
             // 
-            this.nudLastProcessCount.Location = new System.Drawing.Point(1186, 28);
+            this.nudLastProcessCount.Location = new System.Drawing.Point(1096, 26);
             this.nudLastProcessCount.Margin = new System.Windows.Forms.Padding(2);
             this.nudLastProcessCount.Minimum = new decimal(new int[] {
             1,
@@ -417,7 +417,7 @@
             // 
             this.lblLastProcessCount.AutoSize = true;
             this.lblLastProcessCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastProcessCount.Location = new System.Drawing.Point(1076, 28);
+            this.lblLastProcessCount.Location = new System.Drawing.Point(986, 26);
             this.lblLastProcessCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastProcessCount.Name = "lblLastProcessCount";
             this.lblLastProcessCount.Size = new System.Drawing.Size(99, 13);
@@ -428,7 +428,7 @@
             // 
             this.lblPeriod.AutoSize = true;
             this.lblPeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeriod.Location = new System.Drawing.Point(950, 28);
+            this.lblPeriod.Location = new System.Drawing.Point(860, 26);
             this.lblPeriod.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeriod.Name = "lblPeriod";
             this.lblPeriod.Size = new System.Drawing.Size(46, 13);
@@ -440,13 +440,13 @@
             this.dgvShare.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvShare.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvShare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShare.Location = new System.Drawing.Point(745, 54);
+            this.dgvShare.Location = new System.Drawing.Point(656, 54);
             this.dgvShare.Margin = new System.Windows.Forms.Padding(2);
             this.dgvShare.Name = "dgvShare";
             this.dgvShare.RowHeadersVisible = false;
             this.dgvShare.RowHeadersWidth = 62;
             this.dgvShare.RowTemplate.Height = 28;
-            this.dgvShare.Size = new System.Drawing.Size(987, 211);
+            this.dgvShare.Size = new System.Drawing.Size(1021, 260);
             this.dgvShare.TabIndex = 25;
             // 
             // cbxPeriod
@@ -460,7 +460,7 @@
             "1d",
             "1w",
             "1M"});
-            this.cbxPeriod.Location = new System.Drawing.Point(1005, 28);
+            this.cbxPeriod.Location = new System.Drawing.Point(915, 26);
             this.cbxPeriod.Margin = new System.Windows.Forms.Padding(2);
             this.cbxPeriod.Name = "cbxPeriod";
             this.cbxPeriod.Size = new System.Drawing.Size(44, 21);
@@ -473,7 +473,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1916, 1155);
+            this.tabPage2.Size = new System.Drawing.Size(1736, 935);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "BINANCE";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -481,7 +481,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 10000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmMain
