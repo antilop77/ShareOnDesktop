@@ -352,10 +352,11 @@ namespace ShareOnDeskTop
             fnRefreshGridX(50, dgv50);
             fnRefreshGridX(100, dgv100_1);
             fnCbxSymbol();
-            for (int j=0; j<dgvDailyUp.Rows.Count-1;j++) dgvDailyUp.Rows.RemoveAt(0);
-            for (int j=0; j<dgvDailyDown.Rows.Count-1;j++) dgvDailyDown.Rows.RemoveAt(0);
-            for (int j=0; j<dgvPeriodUp.Rows.Count-1;j++) dgvPeriodUp.Rows.RemoveAt(0);
-            for (int j=0; j<dgvPeriodDown.Rows.Count-1;j++) dgvPeriodDown.Rows.RemoveAt(0);
+            int iCount = dgvDailyUp.Rows.Count;
+            for (int j=0; j<iCount-1;j++) dgvDailyUp.Rows.RemoveAt(0);
+            for (int j=0; j<iCount-1;j++) dgvDailyDown.Rows.RemoveAt(0);
+            for (int j=0; j<iCount-1;j++) dgvPeriodUp.Rows.RemoveAt(0);
+            for (int j=0; j<iCount-1;j++) dgvPeriodDown.Rows.RemoveAt(0);
 
             int i = 0;
             foreach (KeyValuePair<string,decimal> item in Common.dailyUpValue.OrderByDescending(key=> key.Value))
