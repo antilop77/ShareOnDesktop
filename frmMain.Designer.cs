@@ -389,7 +389,8 @@
             this.dgv30.Name = "dgv30";
             this.dgv30.RowHeadersVisible = false;
             this.dgv30.RowHeadersWidth = 62;
-            this.dgv30.RowTemplate.Height = 28;
+            this.dgv30.RowTemplate.Height = 16;
+            this.dgv30.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv30.ShowEditingIcon = false;
             this.dgv30.Size = new System.Drawing.Size(396, 644);
             this.dgv30.TabIndex = 29;
@@ -407,7 +408,7 @@
             this.nudLastProcessCount.Size = new System.Drawing.Size(43, 20);
             this.nudLastProcessCount.TabIndex = 28;
             this.nudLastProcessCount.Value = new decimal(new int[] {
-            10,
+            16,
             0,
             0,
             0});

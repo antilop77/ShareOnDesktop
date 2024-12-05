@@ -12,16 +12,14 @@ using System.Windows.Forms;
 
 namespace ShareOnDeskTop
 {
-    
     public partial class frmMain : Form
     {   
         public bool fRefresh = false;
-        private bool fClose = false;
+        public bool fClose = false;
         public frmMain()
         {
             InitializeComponent();
         }
-
         private void frmMain_Load(object sender, EventArgs e)
         {
             Common.mainForm = this;
@@ -149,12 +147,9 @@ namespace ShareOnDeskTop
             
             cbxSymbol.SelectedItem = "XU100";
 
-            Thread myNewThread = new Thread(() => fnTimer());
+            Thread myNewThread = new Thread(() => Common.fnTimer());
             myNewThread.Start();
         }
-
-        
-        
         private void fnRefreshGridX(int bistX, DataGridView dgvX)
         {
             int i = 0;
@@ -215,6 +210,7 @@ namespace ShareOnDeskTop
                 if (bistX != 100)
                 {
                     dgvX.Rows.Add();
+                    //dgvX.Rows[i+1].Height = 15;
                     dgvX.Rows[i].Cells[0].Value = item;
                     dgvX.Rows[i].Cells[1].Value = Math.Round(closedValue, 2).ToString();
                     dgvX.Rows[i].Cells[2].Value = Math.Round(Decimal.Parse(share[0].CloseValue), 2).ToString();
@@ -290,36 +286,7 @@ namespace ShareOnDeskTop
                 dgvShare.Rows[i].Cells[13].Value = analiz.CreatedAt;
                 i++;
             }
-        }
-        private void fnTimer()
-        {
-            Thread myNewThread;
-            bool fFirst = true;
-            while (1==1)
-            {
-                if (fClose)
-                    break;
-                var now = DateTime.Now;
-                var minute = now.Minute;
-                var second = now.Second;
-                if (second != 0 && !fFirst)
-                {
-                    Task.Delay(500);
-                    continue;
-                }
-                fFirst = false;
-                Task.Delay(1000);
-                int whichDay = (int)DateTime.Now.DayOfWeek;
-                if (whichDay == 6 || whichDay == 7) continue;
-                List<string> x = Common.shares.Keys.ToList();
-                foreach(string s in x)
-                {
-                    myNewThread = new Thread(() => Common.fnRepeat(s));
-                    myNewThread.Start();
-                }
-                fRefresh = true;
-            }
-        }     
+        }   
         private void cbxSymbol_SelectedIndexChanged(object sender, EventArgs e)
         {
             fnCbxSymbol();
@@ -402,17 +369,14 @@ namespace ShareOnDeskTop
                     break;
             }
         }
-
         private void nudLastProcessCount_ValueChanged(object sender, EventArgs e)
         {
             Common.lastProcessCount = Int32.Parse(((NumericUpDown)sender).Value.ToString());
         }
-
         private void cbxPeriod_SelectedIndexChanged(object sender, EventArgs e)
         {
             Common.interval = ((ComboBox)sender).SelectedItem.ToString();
         }
-
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             fClose = true;

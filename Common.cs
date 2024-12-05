@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace ShareOnDeskTop
 {
@@ -27,7 +29,7 @@ namespace ShareOnDeskTop
         public static Dictionary<string, decimal> periodUpValue = new Dictionary<string, decimal>();
         public static Dictionary<string, decimal> periodDownValue = new Dictionary<string, decimal>();
 
-        public static int lastProcessCount = 10;
+        public static int lastProcessCount = 16;
         public static string interval = "1m";
         public static readonly Object obj = new Object();
         public static void fnRepeat(string symbol)
@@ -80,5 +82,35 @@ namespace ShareOnDeskTop
             shares[symbol] = analizs;
             connection2.Close();
         }
+
+        public static void fnTimer()
+        {
+            Thread myNewThread;
+            bool fFirst = true;
+            while (1==1)
+            {
+                if (mainForm.fClose)
+                    break;
+                var now = DateTime.Now;
+                var minute = now.Minute;
+                var second = now.Second;
+                if (second != 0 && !fFirst)
+                {
+                    Task.Delay(500);
+                    continue;
+                }
+                fFirst = false;
+                Task.Delay(1000);
+                int whichDay = (int)DateTime.Now.DayOfWeek;
+                if (whichDay == 6 || whichDay == 7) continue;
+                List<string> x = Common.shares.Keys.ToList();
+                foreach(string s in x)
+                {
+                    myNewThread = new Thread(() => Common.fnRepeat(s));
+                    myNewThread.Start();
+                }
+                mainForm.fRefresh = true;
+            }
+        } 
     }
 }
