@@ -36,21 +36,21 @@ namespace ShareOnDeskTop
         {
             string sql = $@"select top {lastProcessCount} 
 	                          Interval
-	                        , convert(varchar(25), InsertDateTime, 108) InsertDateTime 
-	                        , Symbol
-                            , CloseValue
-	                        , JSON_VALUE(SummaryJson, '$.BUY') as BuyCount
-	                        , JSON_VALUE(SummaryJson, '$.NEUTRAL') as NeutralCount
-	                        , JSON_VALUE(SummaryJson, '$.SELL') as SellCount
-	                        , JSON_VALUE(SummaryJson, '$.RECOMMENDATION') as Recommendation
-                            , IndicatorsJson
-                            , OscillatorsJson
-                            , SummaryJson
-                            , convert(varchar(25), AnalysisTime, 108) AnalysisTime 
-                            , convert(varchar(25), CreatedAt, 108) CreatedAt
-                        from {dbName}.dbo.TradingViewAnalysis with (nolock)
+	                        , convert(varchar(25), INSERT_DATE_TIME, 108) InsertDateTime 
+	                        , SYMBOL_CODE
+                            , CLOSE_VALUE
+	                        --, JSON_VALUE(SummaryJson, '$.BUY') as BuyCount
+	                        --, JSON_VALUE(SummaryJson, '$.NEUTRAL') as NeutralCount
+	                        --, JSON_VALUE(SummaryJson, '$.SELL') as SellCount
+	                        --, JSON_VALUE(SummaryJson, '$.RECOMMENDATION') as Recommendation
+                            --, IndicatorsJson
+                            --, OscillatorsJson
+                            --, SummaryJson
+                            , convert(varchar(25), ANALYSIS_TIME, 108) AnalysisTime 
+                            , convert(varchar(25), CREATED_AT, 108) CreatedAt
+                        from {dbName}.dbo.TRADING_VIEW_ANALYSIS with (nolock)
                         where 1=1
-                        and symbol = '{symbol}' --'HALKB'
+                        and SYMBOL_CODE = '{symbol}' --'HALKB'
                             --and InsertDateTime between '2024-11-26 17:14' and '2024-11-26 17:14.999'
                         and Interval = '{interval}' --'1m'
                         order by ID desc ";
@@ -65,18 +65,19 @@ namespace ShareOnDeskTop
             {
                 Analiz analiz = new Analiz();
                 analiz.Interval = sqlDataReader["Interval"].ToString();
-                analiz.InsertDateTime = sqlDataReader["InsertDateTime"].ToString();
-                analiz.Symbol = sqlDataReader["Symbol"].ToString();
-                analiz.CloseValue = sqlDataReader["CloseValue"].ToString();
-                analiz.BuyCount = sqlDataReader["BuyCount"].ToString();
+                analiz.InsertDateTime = sqlDataReader["INSERT_DATE_TIME"].ToString();
+                analiz.Symbol = sqlDataReader["SYMBOL_CODE"].ToString();
+                analiz.CloseValue = sqlDataReader["CLOSE_VALUE"].ToString();
+                /*analiz.BuyCount = sqlDataReader["BuyCount"].ToString();
                 analiz.NeutralCount = sqlDataReader["NeutralCount"].ToString();
                 analiz.SellCount = sqlDataReader["SellCount"].ToString();
                 analiz.Recommendation = sqlDataReader["Recommendation"].ToString();
                 analiz.IndicatorsJson = sqlDataReader["IndicatorsJson"].ToString();
                 analiz.OscillatorsJson = sqlDataReader["OscillatorsJson"].ToString();
                 analiz.SummaryJson = sqlDataReader["SummaryJson"].ToString();
-                analiz.AnalysisTime = sqlDataReader["AnalysisTime"].ToString();
-                analiz.CreatedAt = sqlDataReader["CreatedAt"].ToString();
+                */
+                analiz.AnalysisTime = sqlDataReader["ANALYSIS_TIME"].ToString();
+                analiz.CreatedAt = sqlDataReader["CREATED_AT"].ToString();
                 analizs.Add(analiz);
             }
             shares[symbol] = analizs;

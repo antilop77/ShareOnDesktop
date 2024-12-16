@@ -97,19 +97,19 @@ namespace ShareOnDeskTop
             
             connection.Open();
                     
-            string sql = $@"select d.Symbol, d.BISTx , (select top 1 i.CloseValue
-						                                from {Common.dbName}.dbo.TradingViewAnalysis i
+            string sql = $@"select d.CODE, d.BIST_X , isnull((select top 1 i.Close_Value
+						                                from {Common.dbName}.dbo.TRADING_VIEW_ANALYSIS i
 						                                where 1=1
-						                                and i.symbol = d.Symbol
-						                                and i.InsertDateTime between DATETRUNC(day, getdate()) + ' 09:09' and DATETRUNC(day, getdate()) + ' 09:49.999'
+						                                and i.symbol_CODE COLLATE SQL_Latin1_General_CP1_CI_AS = d.CODE COLLATE SQL_Latin1_General_CP1_CI_AS
+						                                and i.INSERT_DATE_TIME between DATETRUNC(day, getdate()) + ' 09:09' and DATETRUNC(day, getdate()) + ' 09:49.999'
 						                                order by i.Id desc
-						                                ) closedValue
+						                                ), 0) closedValue
                             from {Common.dbName}.dbo.SYMBOL d
                             where 1=1 
-                            and d.Active = 1 
-                            and d.Source = 'BIST' 
-                            and d.BISTx in(30, 50, 100, -1) 
-                            order by d.BISTx, d.Symbol ";
+                            and d.ACTIVE = 1 
+                            --and d.Source = 'BIST' 
+                            and d.BIST_X in(30, 50, 100, -1) 
+                            order by d.BIST_X, d.CODE ";
 
             var command = new SqlCommand(sql, connection);
                     
@@ -117,8 +117,8 @@ namespace ShareOnDeskTop
             List<string> listOfShare = new List<string>();
             while (sqlDataReader.Read())
             {
-                string bistX = sqlDataReader["BISTx"].ToString().Trim();
-                string symbol = sqlDataReader["Symbol"].ToString().Trim();
+                string bistX = sqlDataReader["BIST_X"].ToString().Trim();
+                string symbol = sqlDataReader["CODE"].ToString().Trim();
                 string closedValue = sqlDataReader["closedValue"].ToString().Trim();
                 Common.shares.Add(symbol, null);
                 Common.closedValue.Add(symbol, Decimal.Parse(closedValue));
@@ -145,7 +145,7 @@ namespace ShareOnDeskTop
                 cbxSymbol.Items.Add(share);
             }
             
-            cbxSymbol.SelectedItem = "XU100";
+            cbxSymbol.SelectedItem = "YKBNK";
 
             Thread myNewThread = new Thread(() => Common.fnTimer());
             myNewThread.Start();
