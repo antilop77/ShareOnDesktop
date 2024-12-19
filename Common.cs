@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace ShareOnDeskTop
         {
             string sql = $@"select top {lastProcessCount} 
 	                          Interval
-	                        , convert(varchar(25), INSERT_DATE_TIME, 108) InsertDateTime 
+	                        , convert(varchar(25), INSERT_DATE_TIME, 108) INSERT_DATE_TIME 
 	                        , SYMBOL_CODE
                             , CLOSE_VALUE
 	                        --, JSON_VALUE(SummaryJson, '$.BUY') as BuyCount
@@ -46,8 +47,8 @@ namespace ShareOnDeskTop
                             --, IndicatorsJson
                             --, OscillatorsJson
                             --, SummaryJson
-                            , convert(varchar(25), ANALYSIS_TIME, 108) AnalysisTime 
-                            , convert(varchar(25), CREATED_AT, 108) CreatedAt
+                            , convert(varchar(25), ANALYSIS_TIME, 108) ANALYSIS_TIME 
+                            , convert(varchar(25), CREATED_AT, 108) CREATED_AT
                         from {dbName}.dbo.TRADING_VIEW_ANALYSIS with (nolock)
                         where 1=1
                         and SYMBOL_CODE = '{symbol}' --'HALKB'
@@ -105,11 +106,22 @@ namespace ShareOnDeskTop
                 int whichDay = (int)DateTime.Now.DayOfWeek;
                 if (whichDay == 6 || whichDay == 7) continue;
                 List<string> x = Common.shares.Keys.ToList();
-                foreach(string s in x)
-                {
-                    myNewThread = new Thread(() => Common.fnRepeat(s));
-                    myNewThread.Start();
+                //foreach(string s in x)
+                //{
+                //    myNewThread = new Thread(() => Common.fnRepeat(s));
+                //    myNewThread.Start();
+                //}
+
+                var tasks = new List<Task>();
+      
+                foreach (string s in x)
+                    tasks.Add(Task.Run(() => {Common.fnRepeat(s); }));
+
+                Task t = Task.WhenAll(tasks);
+                try {
+                    t.Wait();
                 }
+                catch {}
                 mainForm.fRefresh = true;
             }
         } 

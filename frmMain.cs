@@ -101,7 +101,8 @@ namespace ShareOnDeskTop
 						                                from {Common.dbName}.dbo.TRADING_VIEW_ANALYSIS i
 						                                where 1=1
 						                                and i.symbol_CODE COLLATE SQL_Latin1_General_CP1_CI_AS = d.CODE COLLATE SQL_Latin1_General_CP1_CI_AS
-						                                and i.INSERT_DATE_TIME between DATETRUNC(day, getdate()) + ' 09:09' and DATETRUNC(day, getdate()) + ' 09:49.999'
+						                                --and i.INSERT_DATE_TIME between DATETRUNC(day, getdate()) + ' 09:09' and DATETRUNC(day, getdate()) + ' 09:49.999'
+                                                        and i.INSERT_DATE_TIME between getdate()-1.05 and getdate()-(1+1/1440)
 						                                order by i.Id desc
 						                                ), 0) closedValue
                             from {Common.dbName}.dbo.SYMBOL d
@@ -145,7 +146,7 @@ namespace ShareOnDeskTop
                 cbxSymbol.Items.Add(share);
             }
             
-            cbxSymbol.SelectedItem = "YKBNK";
+            cbxSymbol.SelectedItem = "BTCUSDT";
 
             Thread myNewThread = new Thread(() => Common.fnTimer());
             myNewThread.Start();
@@ -321,8 +322,11 @@ namespace ShareOnDeskTop
             fnCbxSymbol();
             int iCount = dgvDailyUp.Rows.Count;
             for (int j=0; j<iCount-1;j++) dgvDailyUp.Rows.RemoveAt(0);
+            iCount = dgvDailyDown.Rows.Count;
             for (int j=0; j<iCount-1;j++) dgvDailyDown.Rows.RemoveAt(0);
+            iCount = dgvPeriodUp.Rows.Count;
             for (int j=0; j<iCount-1;j++) dgvPeriodUp.Rows.RemoveAt(0);
+            iCount = dgvPeriodDown.Rows.Count;
             for (int j=0; j<iCount-1;j++) dgvPeriodDown.Rows.RemoveAt(0);
 
             int i = 0;
