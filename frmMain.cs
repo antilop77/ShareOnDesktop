@@ -101,9 +101,9 @@ namespace ShareOnDeskTop
 						                                from {Common.dbName}.dbo.TRADING_VIEW_ANALYSIS i
 						                                where 1=1
 						                                and i.symbol_CODE COLLATE SQL_Latin1_General_CP1_CI_AS = d.CODE COLLATE SQL_Latin1_General_CP1_CI_AS
-						                                --and i.INSERT_DATE_TIME between DATETRUNC(day, getdate()) + ' 09:09' and DATETRUNC(day, getdate()) + ' 09:49.999'
-                                                        and i.INSERT_DATE_TIME between getdate()-1.05 and getdate()-(1+1/1440)
-						                                order by i.Id desc
+						                                --and i.INSERT_DATE_TIME between DATETRUNC(day, getdate()) + ' 00:00' and DATETRUNC(day, getdate()) + ' 09:59.999'
+                                                        and i.INSERT_DATE_TIME >=  DATETRUNC(day, getdate()) --between getdate()-1.05 and getdate()-(1+1/1440)
+						                                order by i.Id
 						                                ), 0) closedValue
                             from {Common.dbName}.dbo.SYMBOL d
                             where 1=1 
@@ -190,6 +190,7 @@ namespace ShareOnDeskTop
 
                 List<Analiz> share = Common.shares[item];
                 int cnt = share.Count;
+                if (cnt == 0) continue;
                 decimal closedValue = Common.closedValue[item];
                 //dgv30.ColumnCount = 6;
                 //dgv30.Columns[0].Name = "Symbol";

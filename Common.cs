@@ -104,7 +104,7 @@ namespace ShareOnDeskTop
                 fFirst = false;
                 Task.Delay(1000);
                 int whichDay = (int)DateTime.Now.DayOfWeek;
-                if (whichDay == 6 || whichDay == 7) continue;
+                //if (whichDay == 6 || whichDay == 7) continue;
                 List<string> x = Common.shares.Keys.ToList();
                 //foreach(string s in x)
                 //{
